@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Main Test Suite" verbose="5">
-
-<parameter name="OS" value="Windows"/>
-<parameter name="browser" value="Chrome"/>
-
-  <test name="API Tests">
-   <classes>
-     <class name="com.restassuredtests.tests.APITests"/>
+<suite name="Test-Suite" >
+<test name="ToolsQA" >
+    <classes>
+        <class name="com.restassuredtests.tests.APITests">
+            <methods>
+                <include name="verifyDetailsOfAllPeople" />
+                <include name="verifyDetailsOfOnePerson" />
+                <include name="verifyCreatingPerson" />
+                <include name="verifyUpdatingExistingPerson" />
+                <include name="verifyDeletingExistingPerson" />
+            </methods>
+        </class>
     </classes>
-  </test>
+</test>
 </suite>
