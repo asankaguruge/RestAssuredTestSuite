@@ -70,7 +70,7 @@ public class RequestResource {
 		//Print the URL with the specific endpoint to the console
 		System.out.println("DELETE - " + RestAssured.baseURI + "api/people/" + personId);
 		//Retrieve the response and return it to the test method in the APITests
-		response = RestAssured.given().contentType("text/html; charset=utf-8").when().delete("api/people/" + personId);
+		response = RestAssured.given().contentType("application/json").when().delete("api/people/" + personId);
 		return response;
 	}
 
